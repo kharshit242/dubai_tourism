@@ -5,45 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai Tourism</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9fa;
         }
+
+        /* Navigation Bar */
         .navbar {
-            background-color: #333;
+            background-color: #222;
             overflow: hidden;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         .navbar a {
             color: white;
             text-decoration: none;
             padding: 14px 20px;
             display: inline-block;
+            font-size: 18px;
+            transition: 0.3s;
         }
+
         .navbar a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #ff9800;
+            color: white;
+            border-radius: 5px;
         }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 50px;
+            background: url('Images/dubai_background.jpg') no-repeat center center/cover;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Container */
         .container {
             padding: 20px;
             text-align: center;
         }
+
+        .place-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
         .place {
             background: white;
             padding: 15px;
             margin: 10px;
-            border-radius: 5px;
-            display: inline-block;
+            border-radius: 10px;
             width: 30%;
-            box-shadow: 2px 2px 10px gray;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
+        .place:hover {
+            transform: scale(1.05);
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
         .place img {
             width: 100%;
             height: 200px;
-            border-radius: 5px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        h1, h2 {
+            color: #222;
+        }
+
+        @media (max-width: 768px) {
+            .place {
+                width: 90%;
+            }
         }
     </style>
 </head>
@@ -58,74 +110,77 @@
         <a href="#">Contact Us</a>
     </div>
 
-    <!-- Main Content -->
-    <div class="container">
+    <!-- Header Section -->
+    <div class="header">
         <h1>Welcome to Dubai Tourism</h1>
         <p>Explore the top attractions in Dubai and experience the beauty of this amazing city!</p>
+    </div>
 
-        <!-- Places to Visit in Dubai -->
+    <!-- Main Content -->
+    <div class="container">
         <h2>Top 10 Places to Visit in Dubai</h2>
-        
-        <div class="place">
-            <img src="Images/burj_khalifa.jpg" alt="Burj Khalifa">
-            <h3>Burj Khalifa</h3>
-            <p>The tallest building in the world offering breathtaking views of Dubai.</p>
-        </div>
 
-        <div class="place">
-            <img src="Images/Burj_Al_Arab.jpg" alt="Burj Al Arab">
-            <h3>Burj Al Arab</h3>
-            <p>A luxurious hotel known for its iconic sail-shaped design.</p>
-        </div>
+        <div class="place-container">
+            <div class="place">
+                <img src="Images/burj_khalifa.jpg" alt="Burj Khalifa">
+                <h3>Burj Khalifa</h3>
+                <p>The tallest building in the world offering breathtaking views of Dubai.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/Dubai_Mall_10.jpg" alt="Dubai Mall">
-            <h3>Dubai Mall</h3>
-            <p>One of the largest shopping malls in the world with various attractions.</p>
-        </div>
+            <div class="place">
+                <img src="Images/Burj_Al_Arab.jpg" alt="Burj Al Arab">
+                <h3>Burj Al Arab</h3>
+                <p>A luxurious hotel known for its iconic sail-shaped design.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/fountain.jpg" alt="Dubai Fountain">
-            <h3>Dubai Fountain</h3>
-            <p>A mesmerizing water fountain show located near Burj Khalifa.</p>
-        </div>
+            <div class="place">
+                <img src="Images/Dubai_Mall_10.jpg" alt="Dubai Mall">
+                <h3>Dubai Mall</h3>
+                <p>One of the largest shopping malls in the world with various attractions.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/Palm Jumeirah.jpg" alt="Palm Jumeirah">
-            <h3>Palm Jumeirah</h3>
-            <p>An artificial island shaped like a palm tree, home to luxurious resorts.</p>
-        </div>
+            <div class="place">
+                <img src="Images/fountain.jpg" alt="Dubai Fountain">
+                <h3>Dubai Fountain</h3>
+                <p>A mesmerizing water fountain show located near Burj Khalifa.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/images.jpg" alt="Dubai Marina">
-            <h3>Dubai Marina</h3>
-            <p>A modern waterfront area with skyscrapers, restaurants, and boat rides.</p>
-        </div>
+            <div class="place">
+                <img src="Images/Palm Jumeirah.jpg" alt="Palm Jumeirah">
+                <h3>Palm Jumeirah</h3>
+                <p>An artificial island shaped like a palm tree, home to luxurious resorts.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/Ski Dubai.jpg" alt="Ski Dubai">
-            <h3>Ski Dubai</h3>
-            <p>Indoor ski resort inside the Mall of the Emirates.</p>
-        </div>
+            <div class="place">
+                <img src="Images/images.jpg" alt="Dubai Marina">
+                <h3>Dubai Marina</h3>
+                <p>A modern waterfront area with skyscrapers, restaurants, and boat rides.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/33.jpg" alt="Dubai Desert Safari">
-            <h3>Dubai Desert Safari</h3>
-            <p>An adventure tour with dune bashing, camel rides, and cultural performances.</p>
-        </div>
+            <div class="place">
+                <img src="Images/Ski Dubai.jpg" alt="Ski Dubai">
+                <h3>Ski Dubai</h3>
+                <p>Indoor ski resort inside the Mall of the Emirates.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/Dubai Museum.jpeg" alt="Dubai Museum">
-            <h3>Dubai Museum</h3>
-            <p>Learn about Dubai's history and culture at Al Fahidi Fort.</p>
-        </div>
+            <div class="place">
+                <img src="Images/33.jpg" alt="Dubai Desert Safari">
+                <h3>Dubai Desert Safari</h3>
+                <p>An adventure tour with dune bashing, camel rides, and cultural performances.</p>
+            </div>
 
-        <div class="place">
-            <img src="Images/Global Village.jpg" alt="Global Village">
-            <h3>Global Village</h3>
-            <p>A cultural entertainment and shopping destination with pavilions from different countries.</p>
-        </div>
+            <div class="place">
+                <img src="Images/Dubai Museum.jpeg" alt="Dubai Museum">
+                <h3>Dubai Museum</h3>
+                <p>Learn about Dubai's history and culture at Al Fahidi Fort.</p>
+            </div>
 
+            <div class="place">
+                <img src="Images/Global Village.jpg" alt="Global Village">
+                <h3>Global Village</h3>
+                <p>A cultural entertainment and shopping destination with pavilions from different countries.</p>
+            </div>
+        </div>
     </div>
 
 </body>
